@@ -59,7 +59,7 @@ class World:
             for intersection in particle.intersections:
                 pygame.draw.aaline(
                     screen,
-                    (255, 0, 0),
+                    (200, 0, 0),
                     particle.pos,
                     intersection
                 )
@@ -103,6 +103,7 @@ class Game:
 
             self.world.draw(self.window.screen)
             self.world.update()
+
             self.window.update()
 
         pygame.quit()
