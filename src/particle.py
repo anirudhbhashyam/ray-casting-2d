@@ -48,7 +48,6 @@ class Particle:
                         min_so_far = d
             if record is not None:
                 self.intersections.append(record)
-        return self.intersections
 
     def draw(self, screen: pygame.Surface) -> None:
         pygame.draw.ellipse(
