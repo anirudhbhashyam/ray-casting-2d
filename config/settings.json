@@ -10,6 +10,8 @@
     "WORLD_SETTINGS":
     {
         "N_PARTICLES": 1,
-        "N_WALLS": 5
+        "N_WALLS": 5,
+        "WIDTH": 800,
+        "HEIGHT": 600
     }
 }
