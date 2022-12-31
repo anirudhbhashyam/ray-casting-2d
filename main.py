@@ -17,6 +17,7 @@ from window import Window
 from game import Game
 from game import World
 
+
 def main() -> int:
     config_settings = config.load(os.path.join(CPD, "config", "settings.json"))
     game_settings = config_settings["GAME_SETTINGS"]
@@ -38,6 +39,7 @@ def main() -> int:
     )
     g.run()
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
