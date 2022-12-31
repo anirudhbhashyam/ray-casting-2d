@@ -19,6 +19,9 @@ class Particle:
     rays: list[Ray] = field(
         default_factory = list
     )
+    intersections: list[np.ndarray[np.float32]] = field(
+        default_factory = list
+    )
     color: tuple[int, int, int] = (255, 255, 255)
 
     def __post_init__(self) -> None:
@@ -31,8 +34,8 @@ class Particle:
                 Ray(pos = self.pos, direction = angle_dir)
             )
 
-    def look(self, walls: list[Boundary]) -> list[np.ndarray[np.float32]]:
-        intersections = []
+    def look(self, walls: list[Boundary]) -> None:
+        self.intersections.clear()
         for ray in self.rays:
             min_so_far = float("inf")
             record = None
@@ -44,8 +47,8 @@ class Particle:
                         record = intersection
                         min_so_far = d
             if record is not None:
-                intersections.append(record)
-        return intersections
+                self.intersections.append(record)
+        return self.intersections
 
     def draw(self, screen: pygame.Surface) -> None:
         pygame.draw.ellipse(
