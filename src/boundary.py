@@ -12,9 +12,10 @@ class Boundary:
     color: tuple[int, int, int] = (255, 255, 255)
 
     def draw(self, screen: pygame.Surface) -> None:
-        pygame.draw.aaline(
+        pygame.draw.line(
             screen,
             (255, 255, 255),
             self.a,
-            self.b
+            self.b,
+            5
         )
