@@ -18,4 +18,5 @@ Move the mouse to move the light source.
 - `python >= 3.10`
 - `pygame`
 - `numpy`
-** Note: ** `pygame` does not support `python 3.11` yet.
+
+**Note:** `pygame` does not support `python 3.11` yet.
